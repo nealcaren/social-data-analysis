@@ -155,7 +155,24 @@ lecture/
 | Guide | Location | Topics |
 |-------|----------|--------|
 | `overview.md` | `pedagogy/` | Comprehensive lecture design framework (CLT, ABT, Peer Instruction) |
+| `slide-design-guide.md` | `pedagogy/` | Visual design principles: 75-word rule, CRAP framework, typography, color, data visualization |
+| `teaching-techniques.md` | `pedagogy/` | Active learning: retrieval practice, predictions, storytelling, 18-minute rule |
 | Quarto guides | `quarto/` | reveal.js slide syntax, speaker notes, incremental reveals, columns |
+
+### Key Principles from Research
+
+**The Numbers That Matter:**
+- **18 minutes**: Maximum before cognitive overload (soft breaks every 10-15 min)
+- **75 words**: More than this per slide = it's a document
+- **6 words**: Ideal target per slide (Godin/Reynolds)
+- **3 seconds**: Audience must grasp slide content this fast
+- **Rule of 3**: Organize around 3 key messages
+- **65%**: Top TED talks are 65% stories, 25% data, 10% credibility
+
+**Picture Superiority Effect:**
+- Hear information → 10% recall after 3 days
+- Add picture → 65% recall after 3 days
+- Images = 6x more memorable than words
 
 ### Recommended Reading
 

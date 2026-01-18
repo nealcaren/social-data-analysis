@@ -6,14 +6,18 @@ You are executing Phase 3 of the lecture design process. Your goal is to create 
 
 In a large lecture hall, the slides are the visual anchor. But slides are not the lecture—they're visual aids. The goal is to reduce extraneous cognitive load so students can focus on understanding, not decoding cluttered visuals.
 
-As Nancy Duarte emphasizes: "Slides are for the audience, not the speaker."
+**Key Insight**: Audiences cannot read and listen simultaneously. When you show text-heavy slides, they read instead of listening to you.
+
+> "If a slide contains more than 75 words, it has become a document, not a presentation." — Nancy Duarte
+
+> "No more than 6 words on a slide. EVER." — Seth Godin
 
 ## Inputs
 
 Before starting, read:
 1. All Phase 0-2 outputs
-2. Quarto reveal.js documentation in `quarto/`
-3. Presentation design guides in `presenting/`
+2. **`pedagogy/slide-design-guide.md`** - Comprehensive visual design principles
+3. **`quarto/`** - Quarto reveal.js syntax reference
 
 ## Your Tasks
 
@@ -197,16 +201,39 @@ slides.qmd
 
 ### 6. Visual Design Principles
 
+See **`pedagogy/slide-design-guide.md`** for comprehensive guidance. Key principles:
+
+**The Numbers That Matter:**
+- **75-word limit**: More than 75 words = it's a document
+- **6-word rule**: Aim for 6 words or fewer per slide (Godin/Reynolds)
+- **3-second test**: Audiences must grasp content within 3 seconds
+- **28pt minimum font**: Never smaller for keynotes
+
+**CRAP Framework (Reynolds):**
+- **Contrast**: Make different things VERY different
+- **Repetition**: Consistent style throughout
+- **Alignment**: Use invisible grid lines
+- **Proximity**: Group related items; separate unrelated
+
 **Simplicity:**
 - One idea per slide
-- Maximum 6 lines of text, 6 words per line (rough guide)
+- Maximum 6 words per slide (aspiration), 6 lines absolute max
 - Use full-bleed images when possible
-- White space is good
+- Empty space is a design element, not wasted space
+- Remove logos from all but first/last slides
 
-**Consistency:**
-- Same fonts throughout
-- Consistent color palette
-- Same layout for similar content
+**The Picture Superiority Effect:**
+- Hear information → remember 10% after 3 days
+- Add a picture → remember 65% after 3 days
+- **Images = 6x more memorable than words alone**
+
+**Signal-to-Noise Ratio:**
+Remove these distractions:
+- Decorative backgrounds
+- 3D effects on charts
+- Unnecessary gridlines
+- Clip art (always)
+- Gradient fills and drop shadows
 
 **Visual Hierarchy:**
 - Largest = most important
