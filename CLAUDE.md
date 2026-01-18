@@ -20,6 +20,7 @@ Users can install this plugin marketplace and individual plugins with:
 /plugin install interview-analyst@sociology-analysis
 /plugin install abductive-analyst@sociology-analysis
 /plugin install text-analyst@sociology-analysis
+/plugin install lecture-designer@sociology-analysis
 ```
 
 ## Available Skills
@@ -33,6 +34,7 @@ After installation, invoke skills with:
 | **Interview Analyst** | Qualitative analysis of interview data | `/interview-analyst` |
 | **Abductive Analyst** | Abductive analysis (Timmermans & Tavory) | `/abductive-analyst` |
 | **Text Analyst** | Computational text analysis (R/Python) | `/text-analyst` |
+| **Lecture Designer** | Transform chapters into engaging lectures | `/lecture-designer` |
 
 ## Unified Phased Architecture
 
@@ -83,11 +85,21 @@ All skills follow the same phased structure with pauses between phases:
 | **4: Validation** | Human validation, diagnostics | User assesses validity |
 | **5: Output** | Publication-ready outputs | Analysis complete |
 
+### Lecture Design
+
+| Phase | Goal | Pause Point |
+|-------|------|-------------|
+| **0: Context & Outcomes** | Define measurable learning outcomes | Instructor confirms outcomes |
+| **1: Content Audit & Narrative** | ABT arc, hook, chunk map | Instructor reviews narrative |
+| **2: Active Learning** | Polls, ConcepTests, peer instruction | Instructor reviews activities |
+| **3: Slide Development** | Quarto reveal.js with speaker notes | Instructor reviews slides |
+| **4: Review & Refinement** | Timing audit, backup plans | Lecture package complete |
+
 ## Repository Structure
 
 ```
 .claude-plugin/
-└── marketplace.json          # Plugin marketplace definition (5 plugins)
+└── marketplace.json          # Plugin marketplace definition (6 plugins)
 
 plugins/
 ├── r-analyst/
@@ -112,13 +124,20 @@ plugins/
 │       ├── SKILL.md          # Main abductive analyst skill
 │       └── phases/           # Phase agent files (7 phases)
 │
-└── text-analyst/
-    └── skills/text-analyst/
-        ├── SKILL.md          # Main text analyst skill
+├── text-analyst/
+│   └── skills/text-analyst/
+│       ├── SKILL.md          # Main text analyst skill
+│       ├── phases/           # Phase agent files
+│       ├── concepts/         # Method concepts (language-agnostic)
+│       ├── r-techniques/     # R implementation guides
+│       └── python-techniques/ # Python implementation guides
+│
+└── lecture-designer/
+    └── skills/lecture-designer/
+        ├── SKILL.md          # Main lecture designer skill
         ├── phases/           # Phase agent files
-        ├── concepts/         # Method concepts (language-agnostic)
-        ├── r-techniques/     # R implementation guides
-        └── python-techniques/ # Python implementation guides
+        ├── pedagogy/         # Teaching methodology guides
+        └── quarto/           # Quarto reveal.js reference
 ```
 
 ## Key Commands

@@ -5,7 +5,7 @@
     "email": "neal.caren@unc.edu"
   },
   "metadata": {
-    "description": "Claude Code skills for rigorous quantitative and qualitative analysis in sociology and social sciences"
+    "description": "Claude Code skills for rigorous social science research and teaching: quantitative analysis, qualitative analysis, text analysis, and lecture design."
   },
   "plugins": [
     {
@@ -66,6 +66,18 @@
       },
       "license": "MIT",
       "keywords": ["text-analysis", "NLP", "topic-models", "sociology", "research"],
+      "strict": false
+    },
+    {
+      "name": "lecture-designer",
+      "source": "./plugins/lecture-designer",
+      "description": "Transform textbook chapters into engaging, evidence-based lectures. Applies cognitive load theory, narrative design (ABT), active learning, and produces Quarto reveal.js slides.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Neal Caren"
+      },
+      "license": "MIT",
+      "keywords": ["teaching", "lectures", "slides", "pedagogy", "active-learning"],
       "strict": false
     }
   ]

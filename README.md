@@ -14,6 +14,7 @@ A Claude Code plugin marketplace with skills for rigorous quantitative and quali
 /plugin install interview-analyst@sociology-analysis
 /plugin install abductive-analyst@sociology-analysis
 /plugin install text-analyst@sociology-analysis
+/plugin install lecture-designer@sociology-analysis
 ```
 
 ## Available Plugins
@@ -27,6 +28,7 @@ Each plugin provides a single focused skill. Install only what you need:
 | **Interview Analyst** | `/interview-analyst` | Pragmatic qualitative analysis for interview data |
 | **Abductive Analyst** | `/abductive-analyst` | Abductive analysis (Timmermans & Tavory) for theory-generating qualitative research |
 | **Text Analyst** | `/text-analyst` | Computational text analysis with R and Python (topic models, sentiment, classification) |
+| **Lecture Designer** | `/lecture-designer` | Transform textbook chapters into engaging lectures with Quarto slides |
 
 Each skill uses a **phased workflow** with mandatory pauses between phases for user review and decision-making.
 
@@ -98,6 +100,20 @@ Phase 4: Validation → Human validation, diagnostics, robustness
 Phase 5: Output → Publication-ready tables, figures, replication
 ```
 
+### Lecture Design
+
+```
+Phase 0: Context & Outcomes → Define measurable learning outcomes
+    ↓ [Instructor Review]
+Phase 1: Content Audit → Narrative arc (ABT), chunk map, hook design
+    ↓ [Instructor Review]
+Phase 2: Active Learning → Polls, ConcepTests, peer instruction
+    ↓ [Instructor Review]
+Phase 3: Slide Development → Quarto reveal.js with speaker notes
+    ↓ [Instructor Review]
+Phase 4: Review → Timing audit, backup plans, instructor guide
+```
+
 ## Repository Structure
 
 ```
@@ -127,13 +143,20 @@ plugins/
 │       ├── SKILL.md              # Abductive analysis orchestrator
 │       └── phases/               # Phase agents (7 phases)
 │
-└── text-analyst/
-    └── skills/text-analyst/
-        ├── SKILL.md              # Text analysis orchestrator
+├── text-analyst/
+│   └── skills/text-analyst/
+│       ├── SKILL.md              # Text analysis orchestrator
+│       ├── phases/               # Phase agents
+│       ├── concepts/             # Method concepts (language-agnostic)
+│       ├── r-techniques/         # R text analysis code guides
+│       └── python-techniques/    # Python text analysis code guides
+│
+└── lecture-designer/
+    └── skills/lecture-designer/
+        ├── SKILL.md              # Lecture design orchestrator
         ├── phases/               # Phase agents
-        ├── concepts/             # Method concepts (language-agnostic)
-        ├── r-techniques/         # R text analysis code guides
-        └── python-techniques/    # Python text analysis code guides
+        ├── pedagogy/             # Teaching methodology (overview)
+        └── quarto/               # Quarto reveal.js reference
 ```
 
 ## Key Features
@@ -169,6 +192,13 @@ plugins/
 - **Sentiment analysis**: VADER, lexicon-based, and ML approaches
 - **Supervised classification**: Traditional ML and transformer fine-tuning
 - **Reproducibility**: Documented preprocessing, seeds, package versions
+
+### Lecture Design Skills
+- **Learning outcomes first**: Backward design from measurable outcomes
+- **Narrative structure**: ABT (And-But-Therefore) for cognitive engagement
+- **Cognitive load management**: Chunking, attention resets every 12-18 minutes
+- **Active learning integration**: Polls, ConcepTests, Peer Instruction
+- **Quarto reveal.js output**: Publication-quality slides with speaker notes
 
 ## Requirements
 
