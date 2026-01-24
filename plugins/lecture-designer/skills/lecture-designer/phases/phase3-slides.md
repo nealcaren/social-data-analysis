@@ -1,6 +1,6 @@
-# Phase 3: Slide Development
+# Phase 3: Slide Development (Google Slides via MCP)
 
-You are executing Phase 3 of the lecture design process. Your goal is to create visually effective slides in Quarto reveal.js format that support the speaker rather than replace them.
+You are executing Phase 3 of the lecture design process. Your goal is to create visually effective slides directly in Google Slides using the Google Docs MCP.
 
 ## Why This Phase Matters
 
@@ -12,29 +12,115 @@ In a large lecture hall, the slides are the visual anchor. But slides are not th
 
 > "No more than 6 words on a slide. EVER." — Seth Godin
 
+## Prerequisites
+
+Before starting this phase, ensure:
+1. **Google Docs MCP is installed and configured**: <https://github.com/nealcaren/google-docs-mcp>
+2. **OAuth authentication is complete**: You should be able to create and edit Google documents
+3. All Phase 0-2 outputs are available
+
 ## Inputs
 
 Before starting, read:
-1. All Phase 0-2 outputs
+1. All Phase 0-2 outputs (learning outcomes, narrative arc, chunk map, activities)
 2. **`pedagogy/slide-design-guide.md`** - Comprehensive visual design principles
-3. **`quarto/`** - Quarto reveal.js syntax reference
+3. **`mcp/google-docs-mcp-setup.md`** - MCP tools reference
 
 ## Your Tasks
 
-### 1. Apply Mayer's Multimedia Principles
+### 1. Create the Presentation
+
+Use the Google Docs MCP to create a new presentation:
+
+```
+Tool: createPresentation
+Parameters:
+  title: "[Course Name] - [Lecture Topic]"
+```
+
+This returns a presentation ID that you'll use for all subsequent operations.
+
+### 2. Plan the Slide Structure
+
+For a 75-minute lecture, plan approximately 30-40 slides:
+
+```
+Slide Structure:
+├── Title slide (1)
+├── Hook/Opening (2-3 slides)
+│   ├── Mystery/problem statement
+│   └── Baseline poll
+├── Chunk 1 (5-7 slides)
+│   ├── Key concept slides
+│   └── ConcepTest poll
+├── Chunk 2 (5-7 slides)
+│   ├── Key concept slides (hardest material)
+│   └── State change activity
+├── Chunk 3 (4-6 slides)
+│   ├── Application slides
+│   └── Synthesis activity
+├── Summary (2-3 slides)
+│   ├── Return to hook
+│   └── Key takeaways
+└── Closing (2 slides)
+    ├── Muddiest point
+    └── Next steps
+```
+
+### 3. Add Slides with Appropriate Layouts
+
+Use `addSlide` with these layout types:
+
+| Layout | Use For |
+|--------|---------|
+| `TITLE` | Title slide |
+| `SECTION_HEADER` | Chunk/section dividers |
+| `TITLE_AND_BODY` | Content slides with bullets |
+| `TITLE_AND_TWO_COLUMNS` | Comparison slides |
+| `BLANK` | Full-bleed images, custom layouts |
+| `BIG_NUMBER` | Statistics, key figures |
+
+**Example: Adding a content slide**
+```
+Tool: addSlide
+Parameters:
+  presentationId: "[presentation-id]"
+  layoutType: "TITLE_AND_BODY"
+```
+
+### 4. Populate Slide Content
+
+Use `insertTextToSlide` to add text to placeholders:
+
+**For title slides:**
+```
+Tool: insertTextToSlide
+Parameters:
+  presentationId: "[presentation-id]"
+  slideIndex: 0
+  shapeId: "[title-placeholder-id]"
+  text: "Lecture Title Here"
+```
+
+**Content guidelines:**
+- **Titles**: 3-6 words, action-oriented
+- **Body**: Maximum 3 bullet points, 6 words each
+- **Never**: Full sentences, paragraphs, or walls of text
+
+### 5. Apply Mayer's Multimedia Principles
 
 For every slide, apply these evidence-based principles:
 
 | Principle | What It Means | How to Apply |
 |-----------|---------------|--------------|
 | **Coherence** | Remove extraneous material | No decorative images, minimal text |
-| **Signaling** | Highlight key information | Use arrows, bolding, color strategically |
-| **Segmenting** | Break into digestible units | One concept per slide, progressive reveal |
+| **Signaling** | Highlight key information | Bold key terms, use color strategically |
+| **Segmenting** | Break into digestible units | One concept per slide |
 | **Redundancy** | Don't duplicate channels | Don't read bullet points aloud |
 | **Spatial Contiguity** | Keep related items close | Labels on diagrams, not in legend |
 | **Temporal Contiguity** | Narrate with visuals | Speak as visuals appear |
 
-### 2. Design for Accessibility
+### 6. Design for Accessibility
 
 **Font Sizes (for large lecture halls):**
 - Headings: 32pt minimum, prefer 44pt
@@ -47,106 +133,44 @@ For every slide, apply these evidence-based principles:
 - Test: Can you read it from the back row?
 
 **Visual Descriptions:**
-- Describe all images verbally ("As you can see in this graph, the trend...")
+- Plan to describe all images verbally ("As you can see in this graph, the trend...")
 - Don't say "As you can see here..." without describing what's there
 
-### 3. Slide Types and Templates
+### 7. Create Slide Types
 
 **Title Slide**
-```markdown
----
-title: "Lecture Title"
-subtitle: "Course Name"
-author: "Instructor Name"
-date: "Date"
-format: revealjs
----
-```
+- Layout: `TITLE`
+- Content: Lecture title, course name, date
+- Keep clean and minimal
 
 **Section Header**
-```markdown
-# Section Title {background-color="#2a4d6e"}
-```
+- Layout: `SECTION_HEADER`
+- Use for chunk transitions
+- Include chunk number and focus
 
 **Content Slide**
-```markdown
-## Slide Title
+- Layout: `TITLE_AND_BODY`
+- Maximum 3 bullet points
+- Each bullet: 6 words or fewer
 
-- Point one
-- Point two
-- Point three
-
-::: {.notes}
-Speaker notes go here with timing cues and delivery notes.
-:::
-```
-
-**Two-Column Slide**
-```markdown
-## Comparison
-
-:::: {.columns}
-::: {.column width="50%"}
-**Option A**
-
-- Feature 1
-- Feature 2
-:::
-
-::: {.column width="50%"}
-**Option B**
-
-- Feature 1
-- Feature 2
-:::
-::::
-```
-
-**Incremental Reveal**
-```markdown
-## Key Points
-
-::: {.incremental}
-- First point (appears first)
-- Second point (appears on click)
-- Third point (appears on click)
-:::
-```
-
-**Image Slide**
-```markdown
-## {background-image="path/to/image.jpg"}
-
-::: {.notes}
-Full-bleed image. Describe: "This image shows..."
-:::
-```
+**Comparison Slide**
+- Layout: `TITLE_AND_TWO_COLUMNS`
+- Use for before/after, old/new, theory A/B comparisons
 
 **Poll Slide**
-```markdown
-## Poll: [Question]
+- Layout: `TITLE_AND_BODY`
+- Question as title
+- Options A-D in body
+- Include peer instruction protocol in speaker notes
 
-What do you think explains [phenomenon]?
+**Image Slide**
+- Layout: `BLANK`
+- Instructor will add full-bleed image
+- Provide image suggestions with links
 
-A) Option A
-B) Option B
-C) Option C
-D) Option D
+### 8. Add Speaker Notes
 
-::: {.notes}
-**Protocol:**
-1. Display question (1 min)
-2. Individual silent vote (1 min)
-3. Check distribution
-4. Peer discussion if 30-70% correct (3 min)
-5. Re-vote (1 min)
-6. Explain answer (2 min)
-:::
-```
-
-### 4. Write Speaker Notes
-
-Every slide should have speaker notes including:
+For each slide, create speaker notes that include:
 
 **Content:**
 - What to SAY (not what's on the slide)
@@ -159,9 +183,8 @@ Every slide should have speaker notes including:
 - Activity cues (e.g., "Launch poll now")
 - Movement cues (e.g., "Move to center stage")
 
-**Example:**
-```markdown
-::: {.notes}
+**Example speaker notes format:**
+```
 **Time:** 2 minutes
 
 **Key point:** Emphasize that this mechanism explains the paradox from the hook.
@@ -169,37 +192,11 @@ Every slide should have speaker notes including:
 **Say:** "Remember our opening puzzle about X? This is the answer. The reason Y happens is because..."
 
 **Transition:** After explaining, launch Poll 2.
-:::
 ```
 
-### 5. Create the Slide Deck Structure
+Note: Speaker notes in Google Slides are added through the Notes section below each slide. Document them in the slide-inventory.md for the instructor.
 
-For a 75-minute lecture, approximately 30-40 slides:
-
-```
-slides.qmd
-├── Title slide
-├── Hook/Opening
-│   ├── Mystery/problem statement
-│   └── Baseline poll
-├── Chunk 1 (5-7 slides)
-│   ├── Key concept slides
-│   └── ConcepTest poll
-├── Chunk 2 (5-7 slides)
-│   ├── Key concept slides (hardest material)
-│   └── State change activity
-├── Chunk 3 (4-6 slides)
-│   ├── Application slides
-│   └── Synthesis activity
-├── Summary
-│   ├── Return to hook
-│   └── Key takeaways
-└── Closing
-    ├── Muddiest point
-    └── Next steps
-```
-
-### 6. Visual Design Principles
+### 9. Visual Design Principles
 
 See **`pedagogy/slide-design-guide.md`** for comprehensive guidance. Key principles:
 
@@ -227,22 +224,9 @@ See **`pedagogy/slide-design-guide.md`** for comprehensive guidance. Key princip
 - Add a picture → remember 65% after 3 days
 - **Images = 6x more memorable than words alone**
 
-**Signal-to-Noise Ratio:**
-Remove these distractions:
-- Decorative backgrounds
-- 3D effects on charts
-- Unnecessary gridlines
-- Clip art (always)
-- Gradient fills and drop shadows
+### 10. Finding Images
 
-**Visual Hierarchy:**
-- Largest = most important
-- Color draws attention
-- Position matters (top-left is read first)
-
-## Finding Images
-
-The Picture Superiority Effect means images dramatically improve retention. Proactively search for relevant images using free stock photo sites.
+The Picture Superiority Effect means images dramatically improve retention. Proactively search for relevant images.
 
 **Search Method:**
 1. Use WebSearch with `site:unsplash.com [search terms]` or `site:pexels.com [search terms]`
@@ -268,80 +252,59 @@ The Picture Superiority Effect means images dramatically improve retention. Proa
 | Subcultures | Van life interior (#vanlife aesthetic) | [Unsplash van interior](https://unsplash.com/s/photos/van-interior) |
 ```
 
-**Note:** The instructor downloads and adds images themselves—you provide curated suggestions with direct links to browse.
+**Note:** The instructor adds images themselves via the Google Slides interface—you provide curated suggestions with direct links.
+
+## MCP Tools Reference
+
+### Creating Presentations
+```
+createPresentation(title) → presentationId
+```
+
+### Adding Slides
+```
+addSlide(presentationId, layoutType)
+  layoutType: TITLE | SECTION_HEADER | TITLE_AND_BODY | TITLE_AND_TWO_COLUMNS | BLANK | BIG_NUMBER
+```
+
+### Adding Text
+```
+insertTextToSlide(presentationId, slideIndex, shapeId, text)
+```
+
+### Finding and Replacing Text
+```
+replaceAllTextInPresentation(presentationId, findText, replaceText)
+```
+
+For complete MCP documentation, see `mcp/google-docs-mcp-setup.md`.
 
 ## Output Files to Create
 
-1. **slides.qmd** - The complete Quarto reveal.js slide deck with:
-   - All slides with proper formatting
-   - Speaker notes for every slide
-   - Timing cues
-   - Activity markers
+1. **slides-link.md** - Document containing:
+   - Google Slides presentation URL
+   - Quick access link for editing
+   - Instructions for the instructor
 
 2. **slide-inventory.md** - List of all slides with:
    - Slide number and title
    - Approximate time
    - Purpose (content, poll, transition, etc.)
    - Learning outcome alignment
+   - Speaker notes (full text for each slide)
 
 3. **visual-assets.md** - List of needed visuals:
-   - Images to source or create
-   - Diagrams to build
+   - Images to add (with source links)
+   - Diagrams to create
    - Charts to generate
+   - Organized by slide number
 
 4. **phase3-report.md** - Executive summary including:
+   - Google Slides presentation link
    - Total slide count
    - Time per section
-   - Any slides that need instructor review
-   - Visual assets needed
-
-## Quarto reveal.js Quick Reference
-
-**YAML Header:**
-```yaml
----
-title: "Lecture Title"
-format:
-  revealjs:
-    theme: default
-    slide-number: true
-    transition: slide
----
-```
-
-**Speaker Notes:**
-```markdown
-::: {.notes}
-Notes here
-:::
-```
-
-**Incremental Lists:**
-```markdown
-::: {.incremental}
-- Item 1
-- Item 2
-:::
-```
-
-**Fragments (appear on click):**
-```markdown
-::: {.fragment}
-This appears on click
-:::
-```
-
-**Columns:**
-```markdown
-:::: {.columns}
-::: {.column width="50%"}
-Left content
-:::
-::: {.column width="50%"}
-Right content
-:::
-::::
-```
+   - Slides needing instructor review
+   - Visual assets the instructor needs to add
 
 ## Guiding Principles
 
@@ -353,15 +316,22 @@ Right content
 
 4. **Big enough for the back row**: If in doubt, make it bigger.
 
-5. **Speaker notes are essential**: They make the deck usable by anyone.
+5. **Speaker notes are essential**: Document them in slide-inventory.md for reference.
 
-6. **Progressive reveal**: Don't dump everything at once.
+6. **Google Slides enables collaboration**: The instructor can easily customize after you create the structure.
+
+7. **Images are the instructor's responsibility**: Provide great suggestions; they add them.
 
 ## When You're Done
 
 Return a summary to the orchestrator that includes:
-1. Confirmation that slides.qmd was created
+1. Google Slides presentation URL
 2. Total slide count and estimated timing
-3. List of visual assets needed
+3. List of visual assets needed (with source links)
 4. Any slides that need special attention
 5. Questions for the instructor about visual preferences
+6. Reminder that the instructor should:
+   - Review and customize text
+   - Add images from the visual-assets.md suggestions
+   - Add their own speaker notes
+   - Test the presentation in slideshow mode
