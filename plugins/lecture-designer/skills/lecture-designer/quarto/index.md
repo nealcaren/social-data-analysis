@@ -1,8 +1,10 @@
 ---
-title: Presentations
+title: Quarto Presentations (Alternative)
 format: html
 slide-format: revealjs
 ---
+
+> **Note**: This guide covers Quarto reveal.js as an alternative to Google Slides. The recommended workflow uses Google Slides via the Google Docs MCP for easier collaboration and native presentation. Use Quarto if you prefer local, version-controlled slides or need PDF output.
 
 ## Overview
 

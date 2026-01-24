@@ -1,10 +1,10 @@
 {
   "name": "lecture-designer",
-  "version": "1.0.0",
-  "description": "Transform textbook chapters into engaging, evidence-based lectures. Applies cognitive load theory, narrative design (ABT), active learning, and produces Quarto reveal.js slides.",
+  "version": "1.1.0",
+  "description": "Transform textbook chapters into engaging, evidence-based lectures. Applies cognitive load theory, narrative design (ABT), active learning, and produces Google Slides via the Google Docs MCP.",
   "author": {
     "name": "Neal Caren"
   },
   "license": "MIT",
-  "keywords": ["teaching", "lectures", "slides", "pedagogy", "active-learning"]
+  "keywords": ["teaching", "lectures", "slides", "pedagogy", "active-learning", "google-slides", "mcp"]
 }

@@ -94,8 +94,10 @@ All skills follow the same phased structure with pauses between phases:
 | **0: Context & Outcomes** | Define measurable learning outcomes | Instructor confirms outcomes |
 | **1: Content Audit & Narrative** | ABT arc, hook, chunk map | Instructor reviews narrative |
 | **2: Active Learning** | Polls, ConcepTests, peer instruction | Instructor reviews activities |
-| **3: Slide Development** | Quarto reveal.js with speaker notes | Instructor reviews slides |
+| **3: Slide Development** | Google Slides via MCP with speaker notes | Instructor reviews slides |
 | **4: Review & Refinement** | Timing audit, backup plans | Lecture package complete |
+
+> **Note**: Lecture Designer requires the [Google Docs MCP](https://github.com/nealcaren/google-docs-mcp) to create slides directly in Google Slides.
 
 ### Literature Review (OpenAlex)
 
@@ -151,7 +153,8 @@ plugins/
 │       ├── SKILL.md          # Main lecture designer skill
 │       ├── phases/           # Phase agent files
 │       ├── pedagogy/         # Teaching methodology guides
-│       └── quarto/           # Quarto reveal.js reference
+│       ├── mcp/              # Google Docs MCP setup guides
+│       └── quarto/           # Quarto reveal.js (alternative)
 │
 └── lit-review/
     └── skills/lit-review/
