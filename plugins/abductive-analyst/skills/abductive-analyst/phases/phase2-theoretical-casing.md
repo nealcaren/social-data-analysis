@@ -44,7 +44,7 @@ For each excerpt, apply AT LEAST THREE different theoretical frameworks:
 - **Actor-Network Theory**: What human and non-human actors are assembled? How is the network configured?
 
 **Middle-Range/Subfield Theory** (use 1-2 based on domain):
-- Apply relevant theories from the substantive area (social movements, religion, health, education, organizations, etc.)
+- Apply relevant theories from the substantive area (e.g., religion, health, education, organizations, etc.)
 - Use any theories from user-provided materials in `/theory/`
 
 ### 3. Document Each Casing

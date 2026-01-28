@@ -9,12 +9,14 @@ A Claude Code plugin marketplace with skills for rigorous quantitative and quali
 /plugin marketplace add nealcaren/sociology-analysis-agents
 
 # Install only the plugins you need
-/plugin install r-analyst@sociology-analysis
-/plugin install stata-analyst@sociology-analysis
-/plugin install interview-analyst@sociology-analysis
-/plugin install abductive-analyst@sociology-analysis
-/plugin install text-analyst@sociology-analysis
-/plugin install lecture-designer@sociology-analysis
+/plugin install r-analyst@sociology-analysis-agents
+/plugin install stata-analyst@sociology-analysis-agents
+/plugin install interview-analyst@sociology-analysis-agents
+/plugin install interview-writeup@sociology-analysis-agents
+/plugin install abductive-analyst@sociology-analysis-agents
+/plugin install text-analyst@sociology-analysis-agents
+/plugin install lecture-designer@sociology-analysis-agents
+/plugin install lit-review@sociology-analysis-agents
 ```
 
 ## Available Plugins
@@ -26,9 +28,11 @@ Each plugin provides a single focused skill. Install only what you need:
 | **R Statistical Analyst** | `/r-analyst` | Phased quantitative analysis workflow using R (DiD, IV, matching, etc.) |
 | **Stata Statistical Analyst** | `/stata-analyst` | Phased quantitative analysis workflow using Stata |
 | **Interview Analyst** | `/interview-analyst` | Pragmatic qualitative analysis for interview data |
+| **Interview Write-Up** | `/interview-writeup` | Write-up support for interview methods and findings |
 | **Abductive Analyst** | `/abductive-analyst` | Abductive analysis (Timmermans & Tavory) for theory-generating qualitative research |
 | **Text Analyst** | `/text-analyst` | Computational text analysis with R and Python (topic models, sentiment, classification) |
 | **Lecture Designer** | `/lecture-designer` | Transform textbook chapters into engaging lectures with Quarto slides |
+| **Lit Review** | `/lit-review` | Build literature databases via OpenAlex |
 
 Each skill uses a **phased workflow** with mandatory pauses between phases for user review and decision-making.
 
@@ -118,7 +122,7 @@ Phase 4: Review → Timing audit, backup plans, instructor guide
 
 ```
 .claude-plugin/
-└── marketplace.json              # Plugin marketplace definition (5 plugins)
+└── marketplace.json              # Plugin marketplace definition (8 plugins)
 
 plugins/
 ├── r-analyst/
@@ -136,6 +140,11 @@ plugins/
 ├── interview-analyst/
 │   └── skills/interview-analyst/
 │       ├── SKILL.md              # Interview orchestrator
+│       └── phases/               # Phase agents
+│
+├── interview-writeup/
+│   └── skills/interview-writeup/
+│       ├── SKILL.md              # Interview write-up orchestrator
 │       └── phases/               # Phase agents
 │
 ├── abductive-analyst/
@@ -157,6 +166,12 @@ plugins/
         ├── phases/               # Phase agents
         ├── pedagogy/             # Teaching methodology (overview)
         └── quarto/               # Quarto reveal.js reference
+
+└── lit-review/
+    └── skills/lit-review/
+        ├── SKILL.md              # Literature review orchestrator
+        ├── phases/               # Phase agents
+        └── api/                  # OpenAlex API reference
 ```
 
 ## Key Features
@@ -176,6 +191,7 @@ plugins/
 - **Quality indicators**: Cognitive empathy, heterogeneity, palpability, follow-up, self-awareness
 - **Evidence selection**: Luminous exemplars, not just typical quotes
 - **Methods transparency**: Detailed templates for sampling, recruitment, saturation
+- **Write-up support**: Methods drafting, findings structure, quote use, and revision checklists
 
 ### Abductive Analysis Skills
 - **Theory-first approach**: Build theoretical sensitivity before data engagement

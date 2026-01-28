@@ -107,7 +107,7 @@ Be specific:
 - Explain precisely HOW your framework reveals their limitation
 - This is not just "extending" prior work—identify where prior work was WRONG or BLIND
 
-Example: "If crisis-forged collectivity is the mechanism of solidarity formation in ACT UP, then Polletta's (2002) account of collective identity formation through shared characteristics is incomplete. It cannot explain how ACT UP formed intense solidarity across radical differences in identity, ideology, and social position. Her framework assumes similarity as the basis for collective identity; our framework shows that shared orientation to crisis can substitute for—and perhaps exceed—similarity-based solidarity."
+Example: "If crisis-forged collectivity is the mechanism of solidarity formation in our focal case, then [Author]'s account of collective identity formation through shared characteristics is incomplete. It cannot explain how our case formed intense solidarity across sharp differences in identity, ideology, and social position. Their framework assumes similarity as the basis for collective identity; our framework shows that shared orientation to crisis can substitute for—and perhaps exceed—similarity-based solidarity."
 
 **e) Acknowledges limitations**:
 - Scope conditions

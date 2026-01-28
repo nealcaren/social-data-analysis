@@ -232,30 +232,30 @@ Felt injustice is necessary condition for participation.
 Create an executive summary:
 
 ```markdown
-## Field Summary: Social Movement Participation (2010-2024)
+## Field Summary: [Your Topic] (2010-2024)
 
 ### State of the Field
-The study of social movement participation has matured considerably since 2010. The field has moved beyond debates between grievance and resource mobilization perspectives toward integrated models that acknowledge multiple pathways to participation.
+The study of [your topic] has matured considerably since 2010. The field has moved beyond early debates toward integrated models that acknowledge multiple mechanisms and pathways.
 
 ### Dominant Approaches
-1. **Network-based explanations**: Social ties remain central
-2. **Biographical approaches**: Life course and identity trajectories
-3. **Contextual models**: Political opportunity structures
+1. **Micro-level explanations**: Individual resources, identities, and motivations
+2. **Meso-level explanations**: Organizational or network dynamics
+3. **Macro-level explanations**: Institutional and contextual conditions
 
 ### Emerging Directions
-1. Digital/hybrid participation
-2. Emotional and cultural dimensions
-3. Global and comparative work
+1. Digital or hybrid forms of the phenomenon
+2. Cultural and emotional mechanisms
+3. Cross-national and comparative work
 
 ### Key Methodological Developments
 - Longitudinal panel designs
 - Mixed methods combining surveys and interviews
-- Computational approaches to movement data
+- Computational or digital trace approaches
 
 ### Major Unresolved Questions
-1. How do online and offline participation relate?
-2. What sustains participation over time?
-3. How do macro contexts shape micro participation?
+1. How do online and offline dimensions relate?
+2. What sustains engagement or outcomes over time?
+3. How do macro contexts shape micro-level behavior or outcomes?
 ```
 
 ## Output Files

@@ -23,7 +23,7 @@ Read all materials in the `/theory` folder carefully. For each text, extract:
 - What processes does it describe?
 
 **Predictions and expectations**
-- What would this theory predict we should find in movement participation data?
+- What would this theory predict we should find in the phenomenon under study?
 - What patterns should be present? What should be absent?
 
 **Scope conditions and limitations**
@@ -34,13 +34,13 @@ Read all materials in the `/theory` folder carefully. For each text, extract:
 
 Following Timmermans & Tavory's distinction:
 
-**Map theories** (substantive/middle-range): Theories specific to the subfield of social movement participation
-- What do these say about how people join movements?
-- What do they say about sustained commitment?
+**Map theories** (substantive/middle-range): Theories specific to the subfield of your phenomenon
+- What do these say about participation, adoption, or engagement processes (as relevant)?
+- What do they say about sustained involvement over time (as relevant)?
 - What are the key debates and tensions within this literature?
 
 **Compass theories** (grammatical): Broader theories of social life that inform how we understand action
-- What compass theories have affinity with social movement research?
+- What compass theories have affinity with your topic?
 - Consider: symbolic interactionism, emotions and affect, collective identity, practice theory, biographical approaches
 
 ### 3. Map the Theoretical Terrain
@@ -48,12 +48,11 @@ Following Timmermans & Tavory's distinction:
 Create a synthetic overview that includes:
 
 **Key concepts across theories**
-- Biographical availability
-- Differential recruitment / social networks
-- Collective identity
-- Moral shocks / emotional responses
-- Frame alignment
-- Organizational factors (mobilizing vs. organizing structures)
+- Networks and social ties
+- Identity and belonging
+- Emotions and moral evaluation
+- Resources, constraints, and opportunities
+- Organizational or institutional dynamics
 - Etc. (based on what you find in the literature)
 
 **Points of convergence**
@@ -72,27 +71,27 @@ Create a synthetic overview that includes:
 Based on your synthesis, generate questions to bring to the data. These are NOT hypotheses to test, but lenses for recognizing surprises.
 
 **What should we expect to find?**
-- Based on the literature, what should ACT UP participation look like?
-- What pathways into the movement would existing theory predict?
+- Based on the literature, what should participation or engagement look like in your case?
+- What pathways into the phenomenon would existing theory predict?
 - What factors should sustain commitment?
 
 **What would be surprising?**
 - What findings would NOT fit the existing theories?
 - What would contradict or complicate the dominant accounts?
-- Where might ACT UP be distinctive in ways existing theory doesn't capture?
+- Where might your case be distinctive in ways existing theory doesn't capture?
 
 **What should we pay attention to?**
 - What specific aspects of the oral histories might reveal tensions with existing theory?
 - What questions should guide our reading of the interviews?
 
-### 5. Consider the ACT UP Context
+### 5. Consider the Focal Case Context
 
-Note any ways the ACT UP case might challenge standard participation theories:
-- Crisis context (AIDS epidemic, mass death, urgency)
-- Participation by both HIV+ and HIV- people
-- Distinctive organizational form (consensus, affinity groups)
-- Intersection of health, sexuality, politics
-- The role of grief, rage, survival
+Note any ways the focal case might challenge standard theories in your area:
+- Contextual shocks or crises
+- Distinctive organizational forms or institutional arrangements
+- Unusual participant composition or roles
+- Intersection of multiple domains (e.g., health, politics, identity)
+- Salient emotions or moral stakes
 
 ## Output Files to Create
 
@@ -145,14 +144,14 @@ Save all outputs to `/analysis/phase0-reports/`:
 **Mechanisms**:
 - [How does participation happen according to this theory?]
 
-**Predictions for ACT UP**:
+**Predictions for [Focal Case]**:
 - [What would we expect to find if this theory is right?]
 
 **Limitations/Gaps**:
 - [What doesn't this theory explain?]
 
 **Potential Tensions**:
-- [How might ACT UP challenge this theory?]
+- [How might your case challenge this theory?]
 ```
 
 ## When You're Done
@@ -161,6 +160,6 @@ Return a summary to the orchestrator that includes:
 1. Confirmation that all files were created
 2. Key theoretical frameworks identified
 3. Most significant tensions or debates in the literature
-4. Gaps that ACT UP data might illuminate
+4. Gaps that your data might illuminate
 5. Recommended sensitizing questions for Phase 1
 6. Any questions for the user about theoretical priorities

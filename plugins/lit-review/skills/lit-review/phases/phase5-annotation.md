@@ -147,34 +147,34 @@ Show each annotation for validation:
 ```markdown
 ## Annotation Review: Paper 1 of 179
 
-**Title**: Biographical Availability and Protest Participation
-**Authors**: McAdam & Paulsen
-**Year**: 2018
+**Title**: Neighborhood Disadvantage and Educational Attainment
+**Authors**: [Author A] & [Author B]
+**Year**: 2019
 **Annotation source**: Full text
 
 ### Research Question
-> "What individual-level factors predict sustained participation in social movements?"
+> "How does neighborhood disadvantage shape educational attainment over the life course?"
 
 ### Theoretical Framework
-> Resource mobilization perspective; extends Klandermans' expectancy-value model
+> Life course perspective; extends cumulative disadvantage framework
 
 ### Methods
 | Aspect | Extracted |
 |--------|-----------|
 | Design | Longitudinal panel (3 waves) |
-| Data | Freedom Summer participant survey + follow-up |
-| Sample | N=245 applicants, tracked 1964-1984 |
-| Geography | United States (Mississippi) |
-| DV | Duration of movement participation |
-| IVs | Biographical availability, prior ties, ideology |
+| Data | Longitudinal household survey |
+| Sample | N=1,200 adolescents, tracked 2000-2015 |
+| Geography | United States (multi-site) |
+| DV | Educational attainment |
+| IVs | Neighborhood disadvantage, school quality, family resources |
 
 ### Key Findings
-1. Social ties to participants strongest predictor (β=.34)
-2. Biographical availability matters only for initial, not sustained participation
-3. Ideological commitment mediates tie effects
+1. Neighborhood disadvantage predicts lower attainment (β=-.28)
+2. School quality mediates part of the association
+3. Family resources buffer disadvantage effects
 
 ### Relevance to Your Project
-This paper provides key operationalizations of participation measures and tests competing theories you're engaging with.
+This paper provides key operationalizations of neighborhood disadvantage and tests mechanisms you're engaging with.
 
 ---
 

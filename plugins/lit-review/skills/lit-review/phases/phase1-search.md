@@ -57,7 +57,7 @@ def search_openalex(query, filters, max_results=500):
 
 # Example usage
 results = search_openalex(
-    query="social movement participation",
+    query="[primary term 1] [primary term 2]",
     filters="from_publication_date:2010-01-01,type:journal-article,language:en",
     max_results=500
 )

@@ -20,19 +20,19 @@ From the scope document, extract explicit criteria:
 ```python
 criteria = {
     "must_include": [
-        "Addresses social movement participation",
+        "Addresses the core phenomenon",
         "Empirical study (quantitative or qualitative)",
         "Published 2010-2024"
     ],
     "must_exclude": [
         "Pure theoretical/conceptual pieces (unless foundational)",
-        "Studies of interest groups or lobbying only",
+        "Studies outside the target domain",
         "Non-English without translation"
     ],
     "borderline_indicators": [
-        "Political participation broadly (may include movements)",
-        "Collective behavior without explicit movement framing",
-        "Activism in organizational contexts"
+        "Adjacent phenomena that may overlap",
+        "Broader terms that require clarification",
+        "Organizational contexts that may or may not fit"
     ]
 }
 ```
@@ -62,10 +62,11 @@ def screen_paper(paper, criteria):
             return ("exclude", f"Auto-exclude: {reason}")
 
     # Check for clear inclusions
+    scope_primary_terms = [t.lower() for t in criteria.get("primary_terms", [])]
     inclusion_signals = [
-        "social movement" in title or "protest" in title,
-        "activism" in abstract and "participation" in abstract,
-        # Add domain-specific inclusions
+        # Add domain-specific inclusions based on scope terms
+        any(term in title for term in scope_primary_terms),
+        any(term in abstract for term in scope_primary_terms),
     ]
 
     if any(inclusion_signals):

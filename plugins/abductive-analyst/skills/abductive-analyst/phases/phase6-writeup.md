@@ -54,7 +54,7 @@ This follows the classic narrative arc: **set-up → conflict → resolution** -
 - Prepare readers for why your findings matter
 
 ### Data and Methods (~1000-1500 words)
-- Describe your data (ACT UP Oral History Project - 187 interviews, etc.)
+- Describe your data (source, scope, number of interviews, time period, etc.)
 - Explain your analytical approach (abductive analysis per Timmermans & Tavory)
 - Discuss sampling strategy and its rationale
 - Address limitations honestly (retrospective accounts, survivor bias, etc.)
@@ -97,7 +97,7 @@ This follows the classic narrative arc: **set-up → conflict → resolution** -
 
 **Specify scope conditions:**
 - When does your theory apply? When might it not?
-- What's specific to ACT UP vs. generalizable to other movements?
+- What's specific to your case vs. generalizable to other settings?
 
 **Address alternative explanations:**
 - Anticipate reviewer objections

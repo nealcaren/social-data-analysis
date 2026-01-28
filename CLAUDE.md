@@ -18,6 +18,7 @@ Users can install this plugin marketplace and individual plugins with:
 /plugin install r-analyst@sociology-analysis-agents
 /plugin install stata-analyst@sociology-analysis-agents
 /plugin install interview-analyst@sociology-analysis-agents
+/plugin install interview-writeup@sociology-analysis-agents
 /plugin install abductive-analyst@sociology-analysis-agents
 /plugin install text-analyst@sociology-analysis-agents
 /plugin install lecture-designer@sociology-analysis-agents
@@ -33,6 +34,7 @@ After installation, invoke skills with:
 | **R Analyst** | Statistical analysis in R for publication | `/r-analyst` |
 | **Stata Analyst** | Statistical analysis in Stata for publication | `/stata-analyst` |
 | **Interview Analyst** | Qualitative analysis of interview data | `/interview-analyst` |
+| **Interview Write-Up** | Write-up support for interview methods and findings | `/interview-writeup` |
 | **Abductive Analyst** | Abductive analysis (Timmermans & Tavory) | `/abductive-analyst` |
 | **Text Analyst** | Computational text analysis (R/Python) | `/text-analyst` |
 | **Lecture Designer** | Transform chapters into engaging lectures | `/lecture-designer` |
@@ -115,7 +117,7 @@ All skills follow the same phased structure with pauses between phases:
 
 ```
 .claude-plugin/
-└── marketplace.json          # Plugin marketplace definition (7 plugins)
+└── marketplace.json          # Plugin marketplace definition (8 plugins)
 
 plugins/
 ├── r-analyst/
@@ -133,6 +135,11 @@ plugins/
 ├── interview-analyst/
 │   └── skills/interview-analyst/
 │       ├── SKILL.md          # Main interview analyst skill
+│       └── phases/           # Phase agent files
+│
+├── interview-writeup/
+│   └── skills/interview-writeup/
+│       ├── SKILL.md          # Main interview write-up skill
 │       └── phases/           # Phase agent files
 │
 ├── abductive-analyst/

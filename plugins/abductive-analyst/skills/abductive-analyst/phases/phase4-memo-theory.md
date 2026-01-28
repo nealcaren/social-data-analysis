@@ -52,17 +52,16 @@ The Inference: Therefore, there is reason to suspect
 
 **Example:**
 ```
-The Surprising Fact: Iris Long, a straight woman with no prior activist
-experience, became the founder of ACT UP's most technically sophisticated
-committee (Treatment & Data).
+The Surprising Fact: A participant with no prior experience in the domain
+became the founder of the project's most technically sophisticated subgroup.
 
-The Missing Rule: If "caregiving experience functions as invisible activist
-training that teaches skills in challenging institutional authority," then
-Long's pathway would be a matter of course—her years caring for sick family
-members prepared her for exactly this work.
+The Missing Rule: If "prior caregiving or administrative experience functions
+as invisible training that teaches skills in challenging institutional authority,"
+then this pathway would be a matter of course—years of informal responsibility
+prepared them for exactly this work.
 
 The Inference: Therefore, there is reason to suspect that caregiving
-experience functions as invisible activist training.
+experience functions as invisible training for domain-relevant leadership.
 ```
 
 This syllogistic form forces you to articulate what NEW theoretical claim would make the anomaly expected rather than surprising. This is the core logic of abductive inference.

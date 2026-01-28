@@ -59,7 +59,7 @@ OpenAlex's topic taxonomy.
 ### Basic Search
 
 ```
-/works?search=social movement participation
+/works?search=educational inequality
 ```
 
 Searches title, abstract, and full text (when indexed).
@@ -75,9 +75,9 @@ Use quotes for exact phrases.
 ### Boolean Operators
 
 ```
-/works?search=protest AND participation
-/works?search=protest OR demonstration
-/works?search=social movement NOT psychology
+/works?search=inequality AND education
+/works?search=neighborhood OR context
+/works?search=education NOT psychology
 ```
 
 ## Filters
@@ -163,7 +163,7 @@ filter = "cited_by_count:>100"
 filter = "concepts.id:C123456789"
 
 # Find concept ID first:
-# GET /concepts?search=social movement
+# GET /concepts?search=educational inequality
 ```
 
 ### Author Filters
@@ -195,7 +195,7 @@ OpenAlex uses cursor-based pagination:
 
 ```python
 # First page
-/works?search=protest&per_page=100
+/works?search=inequality&per_page=100
 
 # Response includes:
 {
@@ -207,7 +207,7 @@ OpenAlex uses cursor-based pagination:
 }
 
 # Next page
-/works?search=protest&per_page=100&cursor=abc123...
+/works?search=inequality&per_page=100&cursor=abc123...
 ```
 
 ## Response Format

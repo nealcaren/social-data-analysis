@@ -12,8 +12,8 @@ A literature review is only as good as its scope. Overly narrow searches miss im
 
 Ask the user to describe their topic in plain language. Then probe for:
 
-- **Core concept**: What is the central phenomenon? (e.g., "social movement participation")
-- **Boundaries**: What is NOT included? (e.g., "not interest groups, not voting behavior")
+- **Core concept**: What is the central phenomenon? (e.g., "educational inequality")
+- **Boundaries**: What is NOT included? (e.g., "not K-12 outcomes, not higher education")
 - **Level of analysis**: Individual, organizational, field-level?
 - **Theoretical tradition**: Does the user work within a specific tradition (resource mobilization, political process, etc.)?
 
@@ -23,19 +23,19 @@ Work with the user to build a comprehensive term list:
 
 ```
 Primary terms:
-- social movement participation
-- protest participation
-- activism
+- [primary term 1]
+- [primary term 2]
+- [primary term 3]
 
 Synonyms and variants:
-- collective action
-- contentious politics
-- political participation (may be too broad)
+- [synonym 1]
+- [synonym 2]
+- [nearby term that may be too broad]
 
 Field-specific vocabulary:
-- biographical availability
-- differential recruitment
-- micromobilization
+- [concept 1]
+- [concept 2]
+- [concept 3]
 ```
 
 Consider:
@@ -59,7 +59,7 @@ Establish explicit criteria:
 ### 4. Identify Key Sources
 
 Ask about:
-- **Key journals**: American Sociological Review, Mobilization, Social Forces, etc.
+- **Key journals**: American Sociological Review, American Journal of Sociology, Social Forces, etc.
 - **Key authors**: Who are the major scholars in this area?
 - **Foundational works**: Are there must-include classic papers?
 - **Known gaps**: Are there subtopics the user already knows are understudied?
@@ -79,7 +79,7 @@ Based on the above, construct initial API queries:
 # Example query structure for OpenAlex
 base_url = "https://api.openalex.org/works"
 params = {
-    "search": "social movement participation",
+    "search": "[primary term 1] [primary term 2]",
     "filter": "from_publication_date:2010-01-01,to_publication_date:2024-12-31,type:journal-article,language:en",
     "sort": "cited_by_count:desc",
     "per_page": 100
