@@ -6,5 +6,6 @@
     "name": "Neal Caren"
   },
   "license": "MIT",
-  "keywords": ["theory-section", "writing", "sociology", "research", "literature-review"]
+  "keywords": ["theory-section", "writing", "sociology", "research", "literature-review"],
+  "skills": "./skills/"
 }
