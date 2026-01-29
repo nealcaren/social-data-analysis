@@ -29,6 +29,8 @@ Users can install this plugin marketplace and individual plugins with:
 /plugin install interview-bookends@social-data-analysis
 /plugin install genre-skill-builder@social-data-analysis
 /plugin install methods-writer@social-data-analysis
+/plugin install case-justification@social-data-analysis
+/plugin install revision-coordinator@social-data-analysis
 ```
 
 ## Available Skills
@@ -51,6 +53,8 @@ After installation, invoke skills with:
 | **Interview Bookends** | Draft introductions and conclusions from theory/findings | `/interview-bookends` |
 | **Genre Skill Builder** | Create genre-analysis-based writing skills from a corpus | `/genre-skill-builder` |
 | **Methods Writer** | Draft Methods sections for interview articles (3 pathways) | `/methods-writer` |
+| **Case Justification** | Draft case justification sections (5 clusters) | `/case-justification` |
+| **Revision Coordinator** | Orchestrate manuscript revision by routing feedback to skills | `/revision-coordinator` |
 
 ## Unified Phased Architecture
 
@@ -187,11 +191,43 @@ Three skills form a complete literature review workflow:
 | **1: Drafting** | Write section following pathway template | User reviews draft |
 | **2: Revision** | Calibrate against benchmarks, polish | Section complete |
 
+### Case Justification
+
+| Phase | Goal | Pause Point |
+|-------|------|-------------|
+| **0: Assessment** | Gather case info, select cluster | User confirms cluster |
+| **1: Drafting** | Write section following cluster template | User reviews draft |
+| **2: Revision** | Calibrate against benchmarks, polish | Section complete |
+
+### Revision Coordinator (Meta-Skill)
+
+Orchestrates manuscript revision by routing feedback to specialized skills:
+
+| Phase | Goal | Pause Point |
+|-------|------|-------------|
+| **0: Intake** | Parse feedback into items, map to sections | User confirms routing |
+| **1: Diagnostic** | Assess clusters/pathways, determine entry points | User confirms strategy |
+| **2: Dispatch** | Route sections to skills for revision | User reviews each section |
+| **3: Integration** | Cross-section coherence checks | User approves coherence |
+| **4: Verification** | Audit all items, generate response memo | Revision complete |
+
+**Skill Routing**:
+
+| Section | Primary Skill |
+|---------|---------------|
+| Introduction | `interview-bookends` |
+| Conclusion | `interview-bookends` |
+| Theory/Literature | `lit-writeup` |
+| Methods | `methods-writer` |
+| Case Justification | `case-justification` |
+| Findings | Direct guidance |
+| Discussion | Direct guidance |
+
 ## Repository Structure
 
 ```
 .claude-plugin/
-└── marketplace.json          # Plugin marketplace definition (15 plugins)
+└── marketplace.json          # Plugin marketplace definition (17 plugins)
 
 plugins/
 ├── r-analyst/
@@ -274,12 +310,24 @@ plugins/
 │       ├── phases/           # Phase agent files (6 phases)
 │       └── templates/        # Skill generation templates
 │
-└── methods-writer/
-    └── skills/methods-writer/
-        ├── SKILL.md          # Main methods-writer skill
-        ├── phases/           # Phase agent files (3 phases)
-        ├── pathways/         # Pathway profiles (Efficient/Standard/Detailed)
-        └── techniques/       # Writing technique guides
+├── methods-writer/
+│   └── skills/methods-writer/
+│       ├── SKILL.md          # Main methods-writer skill
+│       ├── phases/           # Phase agent files (3 phases)
+│       ├── pathways/         # Pathway profiles (Efficient/Standard/Detailed)
+│       └── techniques/       # Writing technique guides
+│
+├── case-justification/
+│   └── skills/case-justification/
+│       ├── SKILL.md          # Main case-justification skill
+│       ├── phases/           # Phase agent files (3 phases)
+│       ├── clusters/         # Cluster profiles (5 styles)
+│       └── techniques/       # Writing technique guides
+│
+└── revision-coordinator/
+    └── skills/revision-coordinator/
+        ├── SKILL.md          # Main revision-coordinator skill
+        └── phases/           # Phase agent files (5 phases)
 ```
 
 ## Key Commands

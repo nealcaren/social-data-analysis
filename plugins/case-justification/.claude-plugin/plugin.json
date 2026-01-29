@@ -1,0 +1,6 @@
+{
+  "name": "case-justification",
+  "version": "1.0.0",
+  "description": "Draft case justification sections for interview-based sociology articles. Five cluster styles (Minimal/Standard/Historical/Comparative/Policy) based on analysis of 32 Social Problems/Social Forces articles.",
+  "skills": "./skills/"
+}

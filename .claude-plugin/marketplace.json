@@ -259,6 +259,43 @@
         "writing"
       ],
       "strict": true
+    },
+    {
+      "name": "case-justification",
+      "source": "./plugins/case-justification",
+      "description": "Draft case justification sections for interview-based sociology articles. Five cluster styles (Minimal/Standard/Historical/Comparative/Policy) based on analysis of 32 Social Problems/Social Forces articles.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Neal Caren"
+      },
+      "license": "MIT",
+      "keywords": [
+        "case-background",
+        "research-setting",
+        "interviews",
+        "sociology",
+        "writing"
+      ],
+      "strict": true
+    },
+    {
+      "name": "revision-coordinator",
+      "source": "./plugins/revision-coordinator",
+      "description": "Orchestrate manuscript revision by routing feedback to specialized writing skills. Parses reviewer/editor feedback, maps to sections, dispatches to lit-writeup/methods-writer/interview-bookends/case-justification, ensures coherence.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Neal Caren"
+      },
+      "license": "MIT",
+      "keywords": [
+        "revision",
+        "feedback",
+        "R&R",
+        "manuscript",
+        "writing",
+        "coordination"
+      ],
+      "strict": true
     }
   ]
 }

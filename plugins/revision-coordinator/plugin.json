@@ -1,0 +1,6 @@
+{
+  "name": "revision-coordinator",
+  "version": "1.0.0",
+  "description": "Orchestrate manuscript revision by routing feedback to specialized writing skills",
+  "skills": ["skills/revision-coordinator"]
+}
