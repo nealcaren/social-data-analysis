@@ -1,0 +1,6 @@
+{
+  "name": "methods-writer",
+  "version": "1.0.0",
+  "description": "Draft Methods sections for interview-based sociology articles. Three pathways (Efficient/Standard/Detailed) based on analysis of 80 Social Problems/Social Forces articles.",
+  "skills": "./skills/"
+}

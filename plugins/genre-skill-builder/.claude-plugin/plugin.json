@@ -1,0 +1,6 @@
+{
+  "name": "genre-skill-builder",
+  "version": "1.0.0",
+  "description": "Meta-skill for creating genre-analysis-based writing skills. Analyzes a corpus of article sections, discovers clusters, and generates complete skills with phases, cluster guides, and techniques.",
+  "skills": "./skills/"
+}
