@@ -1,12 +1,19 @@
 {
   "name": "bibliography-builder",
+  "description": "Build bibliographies from manuscript citations using Zotero. Extract in-text citations, match against Zotero library, and generate formatted bibliographies in APA, ASA, or Chicago style.",
   "version": "1.0.0",
-  "description": "Build bibliographies from manuscript citations using Zotero",
-  "skills": [
-    {
-      "name": "bibliography-builder",
-      "description": "Extract in-text citations, match against Zotero library, and generate formatted bibliographies. Supports APA, ASA, and Chicago styles.",
-      "path": "skills/bibliography-builder/SKILL.md"
-    }
-  ]
+  "author": {
+    "name": "Neal Caren"
+  },
+  "license": "MIT",
+  "keywords": [
+    "bibliography",
+    "citations",
+    "Zotero",
+    "APA",
+    "ASA",
+    "Chicago",
+    "references"
+  ],
+  "skills": "./skills/"
 }
