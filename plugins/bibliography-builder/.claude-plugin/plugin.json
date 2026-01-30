@@ -1,0 +1,12 @@
+{
+  "name": "bibliography-builder",
+  "version": "1.0.0",
+  "description": "Build bibliographies from manuscript citations using Zotero",
+  "skills": [
+    {
+      "name": "bibliography-builder",
+      "description": "Extract in-text citations, match against Zotero library, and generate formatted bibliographies. Supports APA, ASA, and Chicago styles.",
+      "path": "skills/bibliography-builder/SKILL.md"
+    }
+  ]
+}

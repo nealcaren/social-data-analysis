@@ -296,6 +296,26 @@
         "coordination"
       ],
       "strict": true
+    },
+    {
+      "name": "bibliography-builder",
+      "source": "./plugins/bibliography-builder",
+      "description": "Build bibliographies from manuscript citations using Zotero. Extracts Author-Year in-text citations, matches against Zotero library via MCP, reviews issues, and generates formatted bibliographies in APA, ASA, or Chicago style.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Neal Caren"
+      },
+      "license": "MIT",
+      "keywords": [
+        "bibliography",
+        "citations",
+        "Zotero",
+        "APA",
+        "ASA",
+        "Chicago",
+        "references"
+      ],
+      "strict": true
     }
   ]
 }
