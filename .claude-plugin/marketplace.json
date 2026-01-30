@@ -316,6 +316,25 @@
         "references"
       ],
       "strict": true
+    },
+    {
+      "name": "peer-reviewer",
+      "source": "./plugins/peer-reviewer",
+      "description": "Simulate peer review by constructing reviewer personas from Zotero sources. Identifies relevant perspectives, retrieves full texts, builds reviewer profiles, and generates focused reviews on theory/methods and findings.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Neal Caren"
+      },
+      "license": "MIT",
+      "keywords": [
+        "peer-review",
+        "manuscript",
+        "feedback",
+        "Zotero",
+        "revision",
+        "writing"
+      ],
+      "strict": true
     }
   ]
 }
