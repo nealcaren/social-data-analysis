@@ -37,14 +37,17 @@ For each reviewer's sources, read systematically to extract:
 
 ### 2. Build Persona Profile
 
-For each reviewer, construct a detailed profile:
+For each reviewer, construct a detailed profile.
+
+**IMPORTANT**: Name personas for theoretical perspectives, not individual scholars. Even when sources come primarily from one author, name the persona for the *perspective* that work represents (e.g., "Emotions in Movements Perspective" not "Deborah Gould"; "Activist Career Approach" not "Fillieule").
 
 ```markdown
-# Reviewer Persona: [Name/Perspective]
+# Reviewer Persona: [Theoretical Perspective Name]
 
 ## Identity
-- **Type**: [Specific scholar / Theoretical camp / Methodological tradition]
-- **Associated with**: [Key names, institutions, journals]
+- **Perspective**: [Name of theoretical/methodological framework]
+- **Key scholars**: [Authors whose work informs this—for context, not naming the reviewer]
+- **Associated with**: [Institutions, journals, intellectual traditions]
 - **Active period**: [When this perspective emerged/flourished]
 
 ## Sources Consulted
@@ -237,4 +240,4 @@ Report to the orchestrator:
 - Ready for user approval of personas
 
 Example summary:
-> "**Personas constructed**. Reviewer 1 (Lareau/cultural capital): Strong grounding from 4 sources, theory + findings focus, likely supportive of framework but will scrutinize application. Reviewer 2 (Interview methods): Adequate grounding from 3 sources, methods + findings focus, will examine sampling and analytic transparency. Reviewer 3 (Critical education): Limited grounding (1 source), theory + findings focus—persona is more extrapolated, flagged for user. Cross-check shows good coverage of theory and methods; findings covered by all. Ready for user review of personas before simulated reviews."
+> "**Personas constructed**. Reviewer 1 (Cultural Capital in Education): Strong grounding from 4 sources, theory + findings focus, likely supportive of framework but will scrutinize application. Reviewer 2 (Interview Validity Perspective): Adequate grounding from 3 sources, methods + findings focus, will examine sampling and analytic transparency. Reviewer 3 (Critical Education Scholarship): Limited grounding (1 source), theory + findings focus—persona is more extrapolated, flagged for user. Cross-check shows good coverage of theory and methods; findings covered by all. Ready for user review of personas before simulated reviews."

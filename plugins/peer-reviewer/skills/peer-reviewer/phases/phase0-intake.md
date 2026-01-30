@@ -91,10 +91,14 @@ Based on relevance and availability, recommend 2-3 reviewer perspectives.
 
 For each recommended reviewer:
 
-```markdown
-## Recommended Reviewer: [Name/Perspective]
+**IMPORTANT**: Name reviewers for theoretical perspectives, not individual scholars. Even if sources come from one author, name the perspective (e.g., "Emotions in Movements" not "Gould"; "Activist Career Approach" not "Fillieule").
 
-**Type**: [Specific scholar / Theoretical camp / Methodological tradition]
+```markdown
+## Recommended Reviewer: [Theoretical Perspective Name]
+
+**Perspective**: [Name of theoretical/methodological framework]
+
+**Key sources from**: [Author names whose work informs this—for context, not naming]
 
 **Relevance**: [Why this perspective matters for this manuscript]
 
@@ -111,7 +115,7 @@ For each recommended reviewer:
 
 **Expected orientation**: [Likely supportive / Likely critical / Mixed]
 
-**Key questions they'll ask**:
+**Key questions from this perspective**:
 - [Question 1]
 - [Question 2]
 ```
@@ -177,4 +181,4 @@ Report to the orchestrator:
 - Ready for user confirmation of reviewer selection
 
 Example summary:
-> "**Intake complete**. Manuscript engages Bourdieusian cultural capital theory, applies it to educational settings, uses interview methods. Identified 5 candidate perspectives; 3 have strong Zotero availability. **Recommended reviewers**: (1) Annette Lareau [theory + findings, 4 sources], (2) Methodological perspective on interview validity [methods + findings, 3 sources], (3) Critical education scholars [theory + findings, 3 sources]. One high-relevance perspective (Diane Reay) has weak availability—user may want to add sources. Ready for user confirmation."
+> "**Intake complete**. Manuscript engages Bourdieusian cultural capital theory, applies it to educational settings, uses interview methods. Identified 5 candidate perspectives; 3 have strong Zotero availability. **Recommended reviewers**: (1) Cultural Capital in Education [theory + findings, 4 sources from Lareau], (2) Interview Validity Perspective [methods + findings, 3 sources], (3) Critical Education Scholarship [theory + findings, 3 sources]. One high-relevance perspective (class reproduction) has weak availability—user may want to add sources. Ready for user confirmation."

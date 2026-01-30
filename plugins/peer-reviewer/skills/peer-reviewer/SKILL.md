@@ -172,14 +172,31 @@ The skill adapts its review focus based on what you provide.
 
 ---
 
+## Naming Convention: Theory, Not Person
+
+**IMPORTANT**: Reviewer personas are always named for theoretical perspectives, methodological traditions, or conceptual frameworks—never for individual scholars.
+
+Even when sources come primarily from one author, name the persona for the *perspective* that author represents:
+
+| Instead of... | Use... |
+|---------------|--------|
+| "Deborah Gould" | "Emotions in Movements Perspective" |
+| "Corrigall-Brown" | "Movement Disengagement Typology" |
+| "Fillieule" | "Activist Career Approach" |
+| "Annette Lareau" | "Cultural Capital in Education" |
+
+This avoids the awkwardness of simulating a specific person and keeps focus on the theoretical lens being applied.
+
 ## Reviewer Persona Template
 
 Each constructed persona includes:
 
 ```markdown
-## Reviewer: [Name/Perspective]
+## Reviewer: [Theoretical Perspective Name]
 
-**Identity**: [Specific scholar OR theoretical camp]
+**Perspective**: [Name of theoretical/methodological framework]
+
+**Key sources**: [Authors whose work informs this perspective]
 
 **Core commitments**:
 - [Key theoretical position 1]
@@ -191,12 +208,12 @@ Each constructed persona includes:
 - [Source 2 - Zotero key]
 - [Source 3 - Zotero key]
 
-**What they value**:
+**What this perspective values**:
 - [Quality 1]
 - [Quality 2]
 
-**Common critiques**:
-- [Type of critique they often make]
+**Common critiques from this perspective**:
+- [Type of critique this tradition makes]
 
 **Review focus**: [Theory + Findings] OR [Methods + Findings]
 
@@ -210,8 +227,9 @@ Each constructed persona includes:
 Each simulated review follows this structure:
 
 ```markdown
-## Review from [Perspective Name]
+## Review from [Theoretical Perspective Name]
 
+**Perspective**: [Brief description of this theoretical/methodological tradition]
 **Focus areas**: [Theory + Findings] OR [Methods + Findings]
 
 ### Summary
@@ -233,7 +251,7 @@ Each simulated review follows this structure:
 - [Minor concern 2]
 
 ### Representation Check
-- **Is my work cited?** [Yes/No]
+- **Is key work from this perspective cited?** [Yes/No]
 - **Is it represented accurately?** [Assessment]
 - **Suggested corrections**: [If any]
 
@@ -285,9 +303,25 @@ When the user is ready to begin:
 
 ## Key Reminders
 
+- **Save all outputs as files**: Reviews and synthesis memos MUST be saved as markdown files, not just displayed in conversation. Users need persistent documents they can reference.
 - **Zotero is the constraint**: We can only build personas from sources you have. Better library = better simulation.
 - **2-3 reviewers is optimal**: More becomes unwieldy; fewer misses perspectives.
 - **Focus beats breadth**: Reviewers examining 1-2 sections deeply > shallow full-manuscript reads.
 - **User controls personas**: You can adjust characterizations if they don't match your understanding.
 - **Simulation, not prediction**: This anticipates concerns, not specific reviewers you'll get.
 - **Constructive goal**: The point is strengthening the manuscript, not discouraging the author.
+
+## Output File Structure
+
+All outputs are saved to a `peer-review-analysis/` folder in the manuscript directory.
+
+**Use theory-based names for files** (not person names):
+
+```
+peer-review-analysis/
+├── review-disengagement-typology.md    # Named for theoretical perspective
+├── review-emotions-movements.md         # Named for theoretical perspective
+├── review-activist-careers.md           # Named for theoretical perspective
+├── synthesis-memo.md                    # Synthesis and response strategy
+└── [additional files]                   # Personas, revision logs, etc.
+```

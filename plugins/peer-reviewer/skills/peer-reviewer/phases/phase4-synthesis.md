@@ -203,9 +203,11 @@ For concerns being declined or partially addressed, draft response language:
 > "We appreciate this suggestion and have [action taken]. However, [reason for partial response]."
 ```
 
-### 8. Create Synthesis Memo
+### 8. Create and Save Synthesis Memo
 
-Compile everything into a user-facing synthesis:
+**IMPORTANT**: The synthesis memo MUST be saved to a markdown file, not just displayed in conversation. Users need these documents for reference.
+
+Compile everything into a user-facing synthesis and save it:
 
 ```markdown
 # Review Synthesis Memo
@@ -243,15 +245,19 @@ Compile everything into a user-facing synthesis:
 
 ## Output Files to Create
 
-Save to project analysis folder:
+**MANDATORY**: All synthesis outputs must be saved as markdown files. Do not skip file creation.
 
-1. **feedback-inventory.md** - Complete catalog of all concerns
-2. **convergent-concerns.md** - Analysis of shared concerns
-3. **divergent-concerns.md** - Analysis of perspective-specific concerns
-4. **response-classification.md** - Classification of response types
-5. **response-strategy.md** - Prioritized action plan
-6. **response-drafts.md** - Draft language for declined concerns
-7. **synthesis-memo.md** - User-facing summary
+Save to project analysis folder (same folder as Phase 3 reviews):
+
+1. **synthesis-memo.md** - User-facing summary (REQUIRED - save this first)
+2. **feedback-inventory.md** - Complete catalog of all concerns
+3. **convergent-concerns.md** - Analysis of shared concerns
+4. **divergent-concerns.md** - Analysis of perspective-specific concerns
+5. **response-classification.md** - Classification of response types
+6. **response-strategy.md** - Prioritized action plan
+7. **response-drafts.md** - Draft language for declined concerns
+
+At minimum, **synthesis-memo.md** must always be created. Other files can be combined into the synthesis memo if the review scope is modest.
 
 ---
 

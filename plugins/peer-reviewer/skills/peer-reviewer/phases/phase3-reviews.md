@@ -48,11 +48,14 @@ For each reviewer, inhabit the persona and read the assigned sections carefully.
 
 ### 3. Write the Review
 
+**IMPORTANT**: Name reviewers for theoretical perspectives, not individual scholars. Even when sources come from one author, use the perspective name (e.g., "Emotions in Movements Perspective" not "Deborah Gould").
+
 Use this template for each review:
 
 ```markdown
-# Review from [Perspective Name]
+# Review from [Theoretical Perspective Name]
 
+**Perspective**: [Brief description of this theoretical/methodological tradition]
 **Reviewer focus**: [Theory + Findings] OR [Methods + Findings]
 **Sections reviewed**: [List]
 **Date**: [Date]
@@ -61,7 +64,7 @@ Use this template for each review:
 
 ## Summary
 
-[2-3 paragraphs summarizing the manuscript from this perspective. What is the author attempting? How does it relate to the literature I care about? What is my overall impression?]
+[2-3 paragraphs summarizing the manuscript from this perspective. What is the author attempting? How does it relate to the literature this perspective cares about? What is the overall impression?]
 
 ---
 
@@ -110,17 +113,17 @@ Use this template for each review:
 
 ## Representation Check
 
-### Is My Work Cited?
+### Is Key Work from This Perspective Cited?
 [Yes/No. If yes, which works? If no, should it be?]
 
 ### Is It Represented Accurately?
-[Assessment of how my perspective/work is characterized in the manuscript]
+[Assessment of how this perspective's work is characterized in the manuscript]
 
 ### Suggested Corrections
 [If any misrepresentations, provide specific corrections]
 
 ### Missing Engagement
-[Work or concepts from my perspective that should be engaged but aren't]
+[Work or concepts from this perspective that should be engaged but aren't]
 
 ---
 
@@ -173,9 +176,17 @@ Reviews should be:
 - **Major concern**: Would significantly affect the argument's validity or contribution
 - **Minor concern**: Worth addressing but doesn't undermine the core contribution
 
-### 6. Present Reviews to User
+### 6. Save and Present Reviews to User
 
-After completing each review, present it to the user before moving to the next reviewer. This allows the user to:
+**IMPORTANT**: After completing each review, you MUST save it to a markdown file before presenting it to the user. Do not just display reviews in the conversation—they must be persisted as files.
+
+**For each review**:
+1. Save the review to `[analysis-folder]/review-[reviewer-name].md`
+2. Then present a summary to the user
+3. Wait for user acknowledgment before proceeding to the next reviewer
+
+This allows the user to:
+- Access reviews as reference documents later
 - See how each perspective reads the manuscript
 - Note any mischaracterizations of the persona
 - Ask clarifying questions
@@ -185,12 +196,19 @@ After completing each review, present it to the user before moving to the next r
 
 ## Output Files to Create
 
-Save to project analysis folder:
+**MANDATORY**: All reviews must be saved as markdown files. Do not skip file creation.
 
-1. **review-reviewer1.md** - Complete review from first reviewer
-2. **review-reviewer2.md** - Complete review from second reviewer
-3. **review-reviewer3.md** - Complete review from third reviewer (if applicable)
+Save to project analysis folder (create if needed):
+
+1. **review-[perspective].md** - Complete review from first reviewer (use theoretical perspective name, not person name)
+2. **review-[perspective].md** - Complete review from second reviewer
+3. **review-[perspective].md** - Complete review from third reviewer (if applicable)
 4. **review-summary.md** - Brief summary of all reviews for user
+
+**Use theory-based file names** (not person names):
+- `review-disengagement-typology.md` (not `review-corrigall-brown.md`)
+- `review-emotions-movements.md` (not `review-gould.md`)
+- `review-activist-careers.md` (not `review-fillieule.md`)
 
 ---
 
@@ -240,4 +258,4 @@ After all reviews:
 - Ready for Phase 4 synthesis
 
 Example summary:
-> "**Reviews complete**. Reviewer 1 (Lareau): Generally supportive, 1 major concern (concept application), 3 minor concerns, disposition = minor revisions. Reviewer 2 (Methods): More critical, 2 major concerns (sampling, analytic transparency), 2 minor concerns, disposition = major revisions. Reviewer 3 (Critical ed): Mixed, 1 major concern (structural analysis missing), 1 minor concern, disposition = revise and resubmit. **Convergent concerns**: All three note insufficient engagement with class-based mechanisms. Ready for synthesis."
+> "**Reviews complete**. Reviewer 1 (Cultural Capital in Education): Generally supportive, 1 major concern (concept application), 3 minor concerns, disposition = minor revisions. Reviewer 2 (Interview Validity): More critical, 2 major concerns (sampling, analytic transparency), 2 minor concerns, disposition = major revisions. Reviewer 3 (Critical Education): Mixed, 1 major concern (structural analysis missing), 1 minor concern, disposition = revise and resubmit. **Convergent concerns**: All three note insufficient engagement with class-based mechanisms. Ready for synthesis."
