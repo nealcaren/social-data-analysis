@@ -149,7 +149,73 @@ Compare generated skill to its model:
 [Document any deliberate departures from model and why]
 ```
 
-### 7. Optional: Test Run
+### 7. Marketplace Validation
+
+Run the same validation that CI uses to ensure the plugin will pass automated checks:
+
+```python
+# Run this validation script before pushing
+import json
+from pathlib import Path
+
+# Paths - adjust skill_name as needed
+skill_name = "[skill-name]"
+plugin_root = Path(f"output/plugins/{skill_name}")
+manifest = plugin_root / ".claude-plugin" / "plugin.json"
+
+# Check 1: plugin.json exists
+if not manifest.exists():
+    print(f"❌ CRITICAL: Missing {manifest}")
+else:
+    manifest_data = json.loads(manifest.read_text())
+
+    # Check 2: Name matches
+    if manifest_data.get("name") != skill_name:
+        print(f"❌ CRITICAL: plugin.json name '{manifest_data.get('name')}' doesn't match '{skill_name}'")
+    else:
+        print(f"✓ Name matches: {skill_name}")
+
+    # Check 3: Skills is a string path (NOT an array)
+    skills_path = manifest_data.get("skills")
+    if not skills_path:
+        print("❌ CRITICAL: plugin.json missing 'skills' field")
+    elif isinstance(skills_path, list):
+        print("❌ CRITICAL: 'skills' must be a string path (e.g., './skills/'), not an array")
+    elif not (plugin_root / skills_path).exists():
+        print(f"❌ CRITICAL: skills path '{skills_path}' doesn't exist")
+    else:
+        print(f"✓ Skills path valid: {skills_path}")
+
+# Check 4: Validate marketplace entry format
+marketplace_entry = Path(f"analysis/phase4-generation/marketplace-entry.json")
+if marketplace_entry.exists():
+    entry = json.loads(marketplace_entry.read_text())
+    if entry.get("strict") is not True:
+        print("❌ CRITICAL: marketplace entry must have 'strict': true")
+    else:
+        print("✓ Marketplace entry has strict: true")
+    if not entry.get("source", "").startswith("./plugins/"):
+        print(f"❌ WARNING: source should be './plugins/{skill_name}'")
+    else:
+        print(f"✓ Source path correct")
+```
+
+**Checklist**:
+- [ ] `plugin.json` exists at correct location
+- [ ] `plugin.json` name matches skill name
+- [ ] `plugin.json` has `"skills": "./skills/"` (string, not array)
+- [ ] Skills directory exists at that path
+- [ ] Marketplace entry has `"strict": true`
+- [ ] Marketplace entry has correct source path
+
+**Common Errors to Avoid**:
+| Wrong | Correct |
+|-------|---------|
+| `"skills": [{"name": "...", "path": "..."}]` | `"skills": "./skills/"` |
+| `"strict": false` or missing | `"strict": true` |
+| `"source": "plugins/..."` | `"source": "./plugins/..."` |
+
+### 8. Optional: Test Run
 
 If the user provides a sample article or writing task, test the skill:
 
@@ -174,7 +240,7 @@ If the user provides a sample article or writing task, test the skill:
 [Pass / Pass with notes / Needs revision]
 ```
 
-### 8. Generate Validation Report
+### 9. Generate Validation Report
 
 Compile all findings:
 
@@ -201,6 +267,8 @@ Compile all findings:
 
 ## Verified Components
 - [x] plugin.json valid
+- [x] plugin.json uses string skills path (not array)
+- [x] Marketplace entry has strict: true
 - [x] SKILL.md structure correct
 - [x] All cluster profiles present
 - [x] Benchmarks accurate
@@ -231,6 +299,8 @@ Save all outputs to `/analysis/phase5-validation/`:
 - Missing cluster profiles
 - Broken file references
 - Invalid JSON/YAML
+- plugin.json uses array for skills (must be string path)
+- Marketplace entry missing `strict: true`
 
 **Minor** (should fix):
 - Inconsistent capitalization
@@ -262,8 +332,9 @@ Return a summary to the orchestrator that includes:
 3. Minor issues count
 4. Files verified
 5. Benchmark accuracy confirmed
-6. Test results (if tested)
-7. Recommendations for improvement
-8. Next steps (fix issues / finalize / publish)
+6. Marketplace validation passed (plugin.json format, strict: true)
+7. Test results (if tested)
+8. Recommendations for improvement
+9. Next steps (fix issues / finalize / publish)
 
 If issues were found, provide specific guidance on what to fix before the skill is ready for use.
