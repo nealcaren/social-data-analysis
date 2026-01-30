@@ -98,7 +98,90 @@ Read the entire section for prose quality:
 - **Jargon check**: Is technical terminology necessary and defined?
 - **Read aloud**: Does it flow when spoken?
 
-### 8. Final Checklist
+### 8. Compile Citation List & Zotero Lookup
+
+Transform the citation tracking from Phase 3 into final outputs.
+
+**Step 1: Deduplicate citations**
+Combine `citations-tracking.json` into a unique list of sources:
+
+```json
+{
+  "citations": [
+    {
+      "author": "Kirk and Papachristos",
+      "year": "2011",
+      "count": 3,
+      "zotero_key": null,
+      "full_citation": null
+    }
+  ]
+}
+```
+
+**Step 2: Zotero lookup (if MCP available)**
+If the Zotero MCP is configured, look up each citation to get:
+- Zotero item key
+- Full bibliographic metadata
+- Formatted citation
+
+Use `mcp__zotero-mcp__zotero_search_items` with author + year queries:
+
+```
+For each citation:
+1. Search: "{author} {year}"
+2. If match found: record zotero_key and full metadata
+3. If no match: flag for manual resolution
+```
+
+**Step 3: Generate outputs**
+
+Create `citations-final.json`:
+```json
+{
+  "section": "Theory",
+  "total_citations": 37,
+  "unique_sources": 35,
+  "citations": [
+    {
+      "author": "Kirk and Papachristos",
+      "year": "2011",
+      "title": "Legal Cynicism and Collective Efficacy",
+      "zotero_key": "ABC12345",
+      "count_in_section": 3
+    }
+  ],
+  "unmatched": [
+    {
+      "author": "Smith",
+      "year": "2020",
+      "note": "Not found in Zotero library"
+    }
+  ]
+}
+```
+
+Create `bibliography.md`:
+```markdown
+# Bibliography for Theory Section
+
+## Sources Cited (35 unique)
+
+Kirk, David S. and Andrew V. Papachristos. 2011. "Cultural Mechanisms and the Persistence of Neighborhood Violence." *American Journal of Sociology* 116(4):1190-1233.
+
+[Continue for all sources...]
+
+## Unmatched Citations (require manual lookup)
+
+- Smith (2020) - Not found in Zotero library
+```
+
+**If Zotero MCP is not available**:
+- Output the deduplicated citation list without Zotero keys
+- Note that manual bibliography creation is needed
+- The list still saves significant time vs. parsing the document
+
+### 9. Final Checklist
 
 Before completion, verify:
 
@@ -113,8 +196,11 @@ Before completion, verify:
 - [ ] Citation patterns varied
 - [ ] Cluster style consistent throughout
 - [ ] Prose reads smoothly
+- [ ] Citation list compiled (citations-final.json)
+- [ ] Bibliography generated (bibliography.md)
+- [ ] Unmatched citations flagged for user
 
-### 9. Write Quality Memo
+### 10. Write Quality Memo
 
 Create `quality-memo.md`:
 
@@ -214,6 +300,8 @@ A reader should understand your contribution from the Theory section alone, with
 1. **theory-section-final.md** - Final polished Theory section
 2. **quality-memo.md** - Full quality assessment
 3. **revision-log.md** - Record of changes made
+4. **citations-final.json** - Complete citation list with Zotero keys (if available)
+5. **bibliography.md** - Formatted bibliography ready for reference section
 
 ---
 
@@ -224,7 +312,13 @@ Report to the orchestrator:
 - Final citation count
 - Calibration status (in range / deviations explained)
 - Confidence assessment (High/Medium/Low)
+- Citation outputs generated (citations-final.json, bibliography.md)
+- Zotero matches found / unmatched citations
 - Any remaining concerns
 
 Example summary:
-> "**Revision complete**. Final section: 1,523 words (target 1,145-1,744 ✓), 37 citations (target 26-43 ✓), 10 paragraphs, 2 subsections. All calibration metrics in range. Turn confirmed specific and well-placed at P6. Transitions smoothed throughout. Hedging calibrated. **High confidence** section is publication-ready. Minor consideration: paragraph 8 bridge could be strengthened if user wants to emphasize theoretical contribution more."
+> "**Revision complete**. Final section: 1,523 words (target 1,145-1,744 ✓), 37 citations (target 26-43 ✓), 10 paragraphs, 2 subsections. All calibration metrics in range. Turn confirmed specific and well-placed at P6. Transitions smoothed throughout. Hedging calibrated. **High confidence** section is publication-ready.
+>
+> **Citation outputs**: `citations-final.json` with 35 unique sources. Zotero lookup: 32 matched, 3 unmatched (flagged in bibliography.md). `bibliography.md` ready for reference section.
+>
+> Minor consideration: paragraph 8 bridge could be strengthened if user wants to emphasize theoretical contribution more."

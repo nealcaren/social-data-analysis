@@ -111,6 +111,39 @@ As you draft, note:
 - Any deviations from the plan
 - Paragraphs that need revision
 
+### 6. Track Citations Used
+
+Maintain a running list of every citation as you use it. For each citation, record:
+
+```json
+{
+  "citations": [
+    {
+      "author": "Kirk and Papachristos",
+      "year": "2011",
+      "context": "legal cynicism patterning",
+      "paragraph": 3,
+      "pattern": "parenthetical"
+    },
+    {
+      "author": "Connell",
+      "year": "2005",
+      "context": "hegemonic masculinity concept",
+      "paragraph": 5,
+      "pattern": "author-subject"
+    }
+  ]
+}
+```
+
+**Why track citations?**
+- Enables bibliography generation without parsing the document
+- Allows Zotero ID lookup in Phase 5
+- Helps verify citation density during revision
+- Creates audit trail of sources used
+
+Save incrementally to `citations-tracking.json` as you draft.
+
 ---
 
 ## Guiding Principles
@@ -153,6 +186,7 @@ Draft the turn with special care. It's the most important paragraph.
 
 1. **theory-section-draft.md** - Full draft prose organized by subsection
 2. **drafting-notes.md** - Notes on deviations, concerns, needs for revision
+3. **citations-tracking.json** - Running list of all citations used (author, year, context, paragraph, pattern)
 
 ---
 
